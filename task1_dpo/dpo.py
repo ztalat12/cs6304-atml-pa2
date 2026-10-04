@@ -27,10 +27,11 @@ def dpo_loss(
         - ref_rejected_logp
     )
 
-    # Starter implementation:
-    # students must validate the objective carefully.
+    # DPO objective: subtract the reference-policy preference margin from the
+    # policy preference margin before the logistic sigmoid, i.e.
+    # beta * ((log πθ(y_w) - log πθ(y_l)) - (log πref(y_w) - log πref(y_l))).
     logits = beta * (
-        policy_margin + ref_margin
+        policy_margin - ref_margin
     )
 
     loss = -F.logsigmoid(

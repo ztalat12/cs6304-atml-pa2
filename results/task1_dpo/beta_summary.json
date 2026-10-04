@@ -1,0 +1,47 @@
+[
+  {
+    "condition": "beta_0.03",
+    "beta": 0.03,
+    "train_pairs": 600,
+    "budget": "short",
+    "pref_acc": 0.6262975931167603,
+    "margin_mean": 0.15362809598445892,
+    "dpo_loss_at_own_beta": 0.6908903121948242,
+    "kl_token_mean": -0.00018163814035708712,
+    "reward_mean": 1.2400976181030274,
+    "len_mean": 162.09,
+    "len_std": 105.92218581220924,
+    "len_iqr": 218.25,
+    "word_limit_compliance": 0.4
+  },
+  {
+    "condition": "beta_0.1",
+    "beta": 0.1,
+    "train_pairs": 600,
+    "budget": "short",
+    "pref_acc": 0.6297577619552612,
+    "margin_mean": 0.14671488106250763,
+    "dpo_loss_at_own_beta": 0.6862989664077759,
+    "kl_token_mean": -0.00012921403381549505,
+    "reward_mean": 1.2170933532714843,
+    "len_mean": 164.3,
+    "len_std": 105.31030959280608,
+    "len_iqr": 212.0,
+    "word_limit_compliance": 0.4
+  },
+  {
+    "condition": "beta_0.3",
+    "beta": 0.3,
+    "train_pairs": 600,
+    "budget": "short",
+    "pref_acc": 0.6262975931167603,
+    "margin_mean": 0.12557731568813324,
+    "dpo_loss_at_own_beta": 0.6776911616325378,
+    "kl_token_mean": -2.4490668268055304e-05,
+    "reward_mean": 1.2976063537597655,
+    "len_mean": 160.625,
+    "len_std": 104.6034597609938,
+    "len_iqr": 215.5,
+    "word_limit_compliance": 0.4
+  }
+]

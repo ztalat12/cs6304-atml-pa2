@@ -1,0 +1,18 @@
+{
+  "run": "beta_0.3",
+  "beta": 0.3,
+  "dataset": "data/dpo_standard_train.jsonl",
+  "num_pairs": 600,
+  "num_dropped_too_long": 57,
+  "epochs": 1,
+  "batch_size": 2,
+  "grad_accum_steps": 8,
+  "effective_batch": 16,
+  "optimizer_steps": 38,
+  "learning_rate": 2e-05,
+  "seed": 6304,
+  "precision": "fp16+GradScaler, fp32 LoRA",
+  "wall_clock_s": 553.2345546679999,
+  "peak_vram_gb": 7.631395328,
+  "output": "/tmp/PA2/outputs/task1_dpo/beta_0.3"
+}

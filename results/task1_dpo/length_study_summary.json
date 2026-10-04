@@ -1,0 +1,118 @@
+{
+  "stratum_key": "length_stratum",
+  "dataset_length_stats": {
+    "standard_train": {
+      "n": 1500,
+      "frac_chosen_longer": 0.5626666666666666,
+      "frac_rejected_longer": 0.422,
+      "mean_len_diff_chosen_minus_rejected": 42.45,
+      "median_len_diff": 18.0
+    },
+    "balanced_train": {
+      "n": 1500,
+      "frac_chosen_longer": 0.49133333333333334,
+      "frac_rejected_longer": 0.486,
+      "mean_len_diff_chosen_minus_rejected": 5.163333333333333,
+      "median_len_diff": 0.0
+    },
+    "stratified_eval": {
+      "n": 246,
+      "frac_chosen_longer": 0.483739837398374,
+      "frac_rejected_longer": 0.5,
+      "mean_len_diff_chosen_minus_rejected": 2.6951219512195124,
+      "median_len_diff": -0.5
+    }
+  },
+  "models": {
+    "standard": {
+      "per_stratum": {
+        "length_matched": {
+          "n": 80,
+          "pref_acc": 0.55,
+          "margin_mean": 0.18649424612522125,
+          "chosen_len_mean": 122.85,
+          "rejected_len_mean": 123.4
+        },
+        "preferred_longer": {
+          "n": 76,
+          "pref_acc": 0.4605263157894737,
+          "margin_mean": -0.07274818420410156,
+          "chosen_len_mean": 218.85526315789474,
+          "rejected_len_mean": 105.72368421052632
+        },
+        "rejected_longer": {
+          "n": 79,
+          "pref_acc": 0.6835443037974683,
+          "margin_mean": 0.65980652465096,
+          "chosen_len_mean": 102.0379746835443,
+          "rejected_len_mean": 204.873417721519
+        }
+      },
+      "stratified_overall_pref_acc": 0.5659574270248413,
+      "gen_length_tokens": {
+        "mean": 161.665,
+        "std": 105.4052375144489,
+        "median": 248.0,
+        "iqr": 215.25,
+        "n": 200
+      },
+      "word_limit": {
+        "word_limit_compliance": 0.4,
+        "mean_words": 44.6,
+        "length_tokens": {
+          "mean": 52.5,
+          "std": 23.561975016255886,
+          "median": 48.0,
+          "iqr": 28.5,
+          "n": 10
+        },
+        "n": 10
+      }
+    },
+    "length_balanced": {
+      "per_stratum": {
+        "length_matched": {
+          "n": 80,
+          "pref_acc": 0.575,
+          "margin_mean": 0.33269804939627645,
+          "chosen_len_mean": 122.85,
+          "rejected_len_mean": 123.4
+        },
+        "preferred_longer": {
+          "n": 76,
+          "pref_acc": 0.42105263157894735,
+          "margin_mean": -0.46714855495252106,
+          "chosen_len_mean": 218.85526315789474,
+          "rejected_len_mean": 105.72368421052632
+        },
+        "rejected_longer": {
+          "n": 79,
+          "pref_acc": 0.7468354430379747,
+          "margin_mean": 1.368211468563804,
+          "chosen_len_mean": 102.0379746835443,
+          "rejected_len_mean": 204.873417721519
+        }
+      },
+      "stratified_overall_pref_acc": 0.5829787254333496,
+      "gen_length_tokens": {
+        "mean": 163.24,
+        "std": 105.47967676787447,
+        "median": 255.5,
+        "iqr": 210.75,
+        "n": 200
+      },
+      "word_limit": {
+        "word_limit_compliance": 0.3,
+        "mean_words": 44.9,
+        "length_tokens": {
+          "mean": 53.0,
+          "std": 23.72059583287626,
+          "median": 48.0,
+          "iqr": 30.75,
+          "n": 10
+        },
+        "n": 10
+      }
+    }
+  }
+}

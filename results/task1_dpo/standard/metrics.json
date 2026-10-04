@@ -1,0 +1,46 @@
+{
+  "name": "standard",
+  "adapter": "outputs/task1_dpo/standard",
+  "beta": 0.1,
+  "seed": 6304,
+  "eval_pairs_dropped_too_long": 11,
+  "gen_prompts": 200,
+  "max_generation_tokens": 256,
+  "decoding": {
+    "temperature": 0.7,
+    "top_p": 0.9,
+    "do_sample": true
+  },
+  "preference": {
+    "dpo_loss": 0.6748472452163696,
+    "preference_accuracy": 0.6228373646736145,
+    "margin_mean": 0.4294111132621765,
+    "n_pairs": 289
+  },
+  "generation": {
+    "kl_token_mean": 9.960066981656726e-05,
+    "kl_seq_sum_mean": 0.0161019438150106,
+    "reward_mean": 1.2361880111694337,
+    "reward_std": 1.2241788493711325,
+    "truncation_rate": 0.485,
+    "length_tokens": {
+      "mean": 161.665,
+      "std": 105.4052375144489,
+      "median": 248.0,
+      "iqr": 215.25,
+      "n": 200
+    }
+  },
+  "word_limit": {
+    "word_limit_compliance": 0.4,
+    "mean_words": 44.6,
+    "length_tokens": {
+      "mean": 52.5,
+      "std": 23.561975016255886,
+      "median": 48.0,
+      "iqr": 28.5,
+      "n": 10
+    },
+    "n": 10
+  }
+}
