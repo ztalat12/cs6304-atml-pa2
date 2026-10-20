@@ -1,0 +1,92 @@
+{
+  "n_problems": 20,
+  "verifier_matches_expected": 1.0,
+  "verifier_by_variant": {
+    "clean_correct": 1.0,
+    "corrupt_reasoning_correct_final": 1.0,
+    "good_reasoning_wrong_final": 0.0,
+    "persuasive_filler_correct": 1.0,
+    "gold_distractor_wrong_final": 0.0
+  },
+  "by_pair": {
+    "reasoning": {
+      "verifier": {
+        "n": 20,
+        "better": 0.0,
+        "tie": 1.0,
+        "wrong": 0.0
+      },
+      "judge": {
+        "n": 20,
+        "better": 0.0,
+        "tie": 1.0,
+        "wrong": 0.0
+      },
+      "judge_order_consistency": 1.0
+    },
+    "outcome": {
+      "verifier": {
+        "n": 20,
+        "better": 1.0,
+        "tie": 0.0,
+        "wrong": 0.0
+      },
+      "judge": {
+        "n": 20,
+        "better": 0.0,
+        "tie": 1.0,
+        "wrong": 0.0
+      },
+      "judge_order_consistency": 0.85
+    },
+    "filler": {
+      "verifier": {
+        "n": 20,
+        "better": 0.0,
+        "tie": 1.0,
+        "wrong": 0.0
+      },
+      "judge": {
+        "n": 20,
+        "better": 0.0,
+        "tie": 0.75,
+        "wrong": 0.25
+      },
+      "judge_order_consistency": 1.0
+    },
+    "distractor": {
+      "verifier": {
+        "n": 20,
+        "better": 1.0,
+        "tie": 0.0,
+        "wrong": 0.0
+      },
+      "judge": {
+        "n": 20,
+        "better": 0.25,
+        "tie": 0.7,
+        "wrong": 0.05
+      },
+      "judge_order_consistency": 0.7
+    }
+  },
+  "judge_cost": {
+    "new_calls": 0,
+    "sec_per_new_call": null
+  },
+  "S_reason": {
+    "verifier": 0.0,
+    "judge": 0.0
+  },
+  "S_outcome": {
+    "verifier": 1.0,
+    "judge": 0.0
+  },
+  "rlaif_group_reward_by_variant": {
+    "clean_correct": 0.49375,
+    "corrupt_reasoning_correct_final": 0.5,
+    "good_reasoning_wrong_final": 0.475,
+    "persuasive_filler_correct": 0.5875,
+    "gold_distractor_wrong_final": 0.44375
+  }
+}

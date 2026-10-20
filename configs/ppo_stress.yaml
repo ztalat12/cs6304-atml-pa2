@@ -1,0 +1,37 @@
+base_config: configs/base.yaml
+
+# OPTIONAL STRESS TEST for the Task 2 clipping study -- NOT the release configuration.
+# Identical to configs/ppo.yaml except for ONE setting: the policy learning rate is raised
+# from 3e-6 to 1e-4 (about 33x), so that a single PPO update moves token probabilities far
+# enough for the clip range [1-eps, 1+eps] to bind. With the release learning rate the clip
+# fraction was 0 on every pass, so epsilon could not matter. Results go to their own folders.
+
+updates: 20
+fork_updates: 8
+prompts_per_update: 1
+ppo_epochs: 2
+
+policy_learning_rate: 1.0e-4          # <-- the only change (release: 3.0e-6)
+value_lora_learning_rate: 1.0e-4
+value_head_learning_rate: 3.0e-4
+value_train_mode: lora_head
+
+clip_epsilon: 0.20
+clip_values: [0.05, 0.20, 0.50]
+kl_beta: 0.10
+kl_values: [0.0, 0.10, 0.20]
+
+gamma: 1.0
+gae_lambda: 0.95
+value_coef: 0.50
+missing_eos_penalty: 1.0
+
+max_prompt_length: 256
+max_response_length: 512
+eval_max_response_length: 768
+reward_max_length: 1280
+max_grad_norm: 1.0
+
+output: outputs/task2_ppo/stress_lr1e-4/standard
+results_dir: results/task2_ppo/stress_lr1e-4
+cached_rollouts: cached/ppo_rollout.pt

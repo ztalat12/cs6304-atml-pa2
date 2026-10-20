@@ -1,0 +1,7 @@
+dataset,policy,n,exact_accuracy,lenient_accuracy,rescued_hash_lenient,rescued_boxed,rescued_answer_is,hash_present_but_unparsed
+gsm,sft,300,0.2733333333333333,0.44,20,22,8,38
+gsm,rlvr,300,0.29333333333333333,0.44333333333333336,15,23,7,34
+gsm,rlaif,300,0.29,0.44333333333333336,17,23,6,34
+transfer,sft,100,0.42,0.52,2,4,4,3
+transfer,rlvr,100,0.46,0.55,1,5,3,2
+transfer,rlaif,100,0.48,0.55,1,4,2,1

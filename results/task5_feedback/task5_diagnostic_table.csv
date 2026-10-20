@@ -1,0 +1,13 @@
+pair,mechanism,better,tie,wrong,n,order_consistency
+reasoning,verifier,0.0,1.0,0.0,20,
+reasoning,judge,0.0,1.0,0.0,20,1.0
+reasoning,judge_echo_as_tie,0.0,1.0,0.0,20,1.0
+outcome,verifier,1.0,0.0,0.0,20,
+outcome,judge,0.0,1.0,0.0,20,0.85
+outcome,judge_echo_as_tie,0.0,1.0,0.0,20,0.85
+filler,verifier,0.0,1.0,0.0,20,
+filler,judge,0.0,0.75,0.25,20,1.0
+filler,judge_echo_as_tie,0.0,0.95,0.05,20,0.95
+distractor,verifier,1.0,0.0,0.0,20,
+distractor,judge,0.25,0.7,0.05,20,0.7
+distractor,judge_echo_as_tie,0.25,0.7,0.05,20,0.7

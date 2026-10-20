@@ -1,0 +1,80 @@
+{
+  "forks": [
+    {
+      "condition": "fork_grpo",
+      "loss_type": "grpo",
+      "updates": 8,
+      "generated_tokens": 10254,
+      "wasted_token_fraction": 0.5492490735322801,
+      "heldout_reward": 1.678828125,
+      "heldout_kl": 2.4242168560655088e-05,
+      "heldout_entropy": 0.8257016979910995,
+      "heldout_len": 297.47,
+      "heldout_len_std": 261.975265044144,
+      "heldout_trunc": 0.1,
+      "heldout_distinct2": 0.9417936766384206
+    },
+    {
+      "condition": "fork_dr_grpo",
+      "loss_type": "dr_grpo",
+      "updates": 8,
+      "generated_tokens": 10073,
+      "wasted_token_fraction": 0.5082894867467488,
+      "heldout_reward": 1.7412265014648438,
+      "heldout_kl": 3.335135998764135e-05,
+      "heldout_entropy": 0.8276887742568853,
+      "heldout_len": 290.36,
+      "heldout_len_std": 251.51747614843947,
+      "heldout_trunc": 0.08,
+      "heldout_distinct2": 0.9308221763981815
+    }
+  ],
+  "length_conditioned": {
+    "median_length_split": 188.0,
+    "grpo": {
+      "n_completions": 21,
+      "corr_len_gradnorm": -0.3447186330520598,
+      "corr_len_gradnorm_per_unit_adv": -0.7667443249811225,
+      "long_over_short": 0.43573391070348033,
+      "long_over_short_negative_adv": 0.416447765388863,
+      "long_over_short_positive_adv": 0.4612253148511109,
+      "mean_grad_norm_short": 0.11668710207397287,
+      "mean_grad_norm_long": 0.05084452731534839,
+      "mean_length": 220.0952380952381
+    },
+    "dr_grpo": {
+      "n_completions": 22,
+      "corr_len_gradnorm": 0.5148283679135303,
+      "corr_len_gradnorm_per_unit_adv": 0.8535393158455888,
+      "long_over_short": 1.5041944633911861,
+      "long_over_short_negative_adv": 0.8235869024256367,
+      "long_over_short_positive_adv": 2.4762950159906514,
+      "mean_grad_norm_short": 0.026463632895187897,
+      "mean_grad_norm_long": 0.0398064500821585,
+      "mean_length": 225.13636363636363
+    },
+    "update1_paired": {
+      "n": 4,
+      "identical_samples": true,
+      "length_and_ratio_dr_over_grpo": [
+        [
+          166,
+          0.32425762520052676
+        ],
+        [
+          301,
+          0.5880507945557041
+        ],
+        [
+          155,
+          0.30277862995865557
+        ],
+        [
+          188,
+          0.3673001617886191
+        ]
+      ],
+      "corr_len_ratio": 0.9999999827079527
+    }
+  }
+}

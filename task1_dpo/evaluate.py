@@ -30,7 +30,7 @@ from common.generation import batch_generate, response_sequence_logprobs, respon
 from common.logging_utils import save_json, set_seed
 from common.metrics import word_count, word_limit_compliance
 from common.models import clear_gpu, load_policy, load_reward_model, load_tokenizer, reference_mode
-from task1_dpo.train import make_collate
+from task1_dpo.train import filter_fitting, make_collate
 
 
 def _to_device(batch, device):
@@ -50,7 +50,7 @@ def length_stats(lengths):
 
 
 @torch.no_grad()
-def preference_metrics(model, tokenizer, rows, beta, max_length, batch_size=4):
+def preference_metrics(model, tokenizer, rows, beta, max_length, batch_size=4, indices=None):
     """Teacher-forced scoring of held-out (x, y+, y-) pairs.
 
     For every pair we compute the four sequence log-probs and the margin
@@ -60,6 +60,7 @@ def preference_metrics(model, tokenizer, rows, beta, max_length, batch_size=4):
     """
     collate = make_collate(tokenizer, max_length)
     device = next(model.parameters()).device
+    indices = list(range(len(rows))) if indices is None else indices   # original positions in the file
     records = []
     for start in range(0, len(rows), batch_size):
         chunk = rows[start:start + batch_size]
@@ -74,7 +75,7 @@ def preference_metrics(model, tokenizer, rows, beta, max_length, batch_size=4):
         rlen = rejected["response_mask"].sum(-1)
         for i, row in enumerate(chunk):
             records.append({
-                "index": start + i,                       # position in the fixed eval file
+                "index": indices[start + i],              # position in the ORIGINAL eval file
                 "prompt_id": row.get("prompt_id", row.get("id")),
                 "margin": float(margin[i]),
                 "chosen_logratio": float(pc[i] - rc[i]),
@@ -113,7 +114,7 @@ def generation_metrics(model, tokenizer, rm, rm_tok, prompts, cfg, batch_size=4,
     for start in range(0, len(prompts), batch_size):
         chunk = prompts[start:start + batch_size]
         out = batch_generate(model, tokenizer, chunk,
-                             max_prompt_length=int(cfg.get("max_prompt_length", 512)),
+                             max_prompt_length=int(cfg.get("max_prompt_length", cfg["max_sequence_length"])),
                              max_new_tokens=int(cfg["max_generation_tokens"]),
                              temperature=float(gen["temperature"]), top_p=float(gen["top_p"]),
                              do_sample=bool(gen["do_sample"]))
@@ -179,22 +180,28 @@ def evaluate_adapter(config_path, adapter, name, beta=None, pair_rows=None, gen_
     model = load_policy(cfg, adapter_path=adapter, trainable=False)
     rm, rm_tok = load_reward_model(cfg)
 
-    rows = pair_rows if pair_rows is not None else read_jsonl(cfg["paths"]["dpo_standard_eval"])
+    all_rows = pair_rows if pair_rows is not None else read_jsonl(cfg["paths"]["dpo_standard_eval"])
+    # Same too-long-prompt rule as training (see train.filter_fitting); dropped IDs are saved.
+    rows, kept_idx, dropped = filter_fitting(all_rows, tokenizer, int(cfg["max_sequence_length"]))
+    save_json(out_dir / "eval_dropped.json", {"dropped": dropped, "n_kept": len(rows)})
 
     pref, pair_records = preference_metrics(model, tokenizer, rows, beta,
-                                            int(cfg["max_sequence_length"]), batch_size)
+                                            int(cfg["max_sequence_length"]), batch_size, indices=kept_idx)
     write_jsonl(out_dir / "pairs.jsonl", pair_records)
 
+    # Generation prompts: the first N USABLE held-out prompts, never truncated
+    # (every kept prompt fits within max_sequence_length).
     prompts = [prompt_messages_from_preference(r) for r in rows[:gen_prompts]]
     gen, gen_records = generation_metrics(model, tokenizer, rm, rm_tok, prompts, cfg, batch_size, seed=seed)
     for i, g in enumerate(gen_records):
-        g["index"] = i                       # index into the eval file (first N prompts)
+        g["index"] = kept_idx[i]             # position in the ORIGINAL eval file
     write_jsonl(out_dir / "generations.jsonl", gen_records)
 
     wl, wl_records = word_limit_metrics(model, tokenizer, rm, rm_tok, cfg, seed)
     write_jsonl(out_dir / "word_limit.jsonl", wl_records)
 
     metrics = {"name": name, "adapter": adapter, "beta": beta, "seed": seed,
+               "eval_pairs_dropped_too_long": len(dropped),
                "gen_prompts": len(prompts), "max_generation_tokens": int(cfg["max_generation_tokens"]),
                "decoding": cfg["generation"],
                "preference": pref, "generation": gen, "word_limit": wl}

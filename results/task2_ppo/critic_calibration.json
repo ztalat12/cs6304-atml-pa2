@@ -1,0 +1,15 @@
+{
+  "n_answers": 20,
+  "bias": -2.19868296533823,
+  "corr_value_reward": 0.38417229384267443,
+  "corr_ci95": [
+    -0.07030843312470797,
+    0.7065771018314745
+  ],
+  "ev_vs_reward": 0.0968785093422575,
+  "ev_vs_returns_circular": 0.7995259824731582,
+  "gae_horizon_tokens_10pct": 44.89056748035484,
+  "share_inside_horizon_mean": 0.3038723419953356,
+  "value_loss_first5": 2.4670178651809693,
+  "value_loss_last5": 1.3269191026687621
+}

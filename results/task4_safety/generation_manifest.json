@@ -1,0 +1,88 @@
+{
+  "policies": {
+    "sft": {
+      "adapter": null,
+      "sha256": null,
+      "decoding": {
+        "repetition_penalty": 1.1,
+        "top_k": 20,
+        "eos_token_id": [
+          151645,
+          151643
+        ],
+        "pad_token_id": 151643,
+        "do_sample": false,
+        "temperature": 0.0,
+        "top_p": 1.0,
+        "max_prompt_length": 256,
+        "max_new_tokens": 256,
+        "batch_size": 16
+      },
+      "n_rows": 450,
+      "wall_clock_s": 246.03688222
+    },
+    "dpo": {
+      "adapter": "outputs/task1_dpo/standard",
+      "sha256": "633c31e787bd57d2d09401ba5f50e5027ff808819733aee92d5cd8f08d773f73",
+      "decoding": {
+        "repetition_penalty": 1.1,
+        "top_k": 20,
+        "eos_token_id": [
+          151645,
+          151643
+        ],
+        "pad_token_id": 151643,
+        "do_sample": false,
+        "temperature": 0.0,
+        "top_p": 1.0,
+        "max_prompt_length": 256,
+        "max_new_tokens": 256,
+        "batch_size": 16
+      },
+      "n_rows": 450,
+      "wall_clock_s": 317.514265433
+    },
+    "ppo": {
+      "adapter": "outputs/task2_ppo/standard",
+      "sha256": "37bde6d075db8ee601e8f3fbcb1b8626aba829d7b2ed8c99aa0727d19758263d",
+      "decoding": {
+        "repetition_penalty": 1.1,
+        "top_k": 20,
+        "eos_token_id": [
+          151645,
+          151643
+        ],
+        "pad_token_id": 151643,
+        "do_sample": false,
+        "temperature": 0.0,
+        "top_p": 1.0,
+        "max_prompt_length": 256,
+        "max_new_tokens": 256,
+        "batch_size": 16
+      },
+      "n_rows": 450,
+      "wall_clock_s": 308.60995478999996
+    },
+    "grpo": {
+      "adapter": "outputs/task3_grpo/standard",
+      "sha256": "2988393d19c662083e30d1fd33575a6dff40d6973607811d9db2c3bb5b87fa1e",
+      "decoding": {
+        "repetition_penalty": 1.1,
+        "top_k": 20,
+        "eos_token_id": [
+          151645,
+          151643
+        ],
+        "pad_token_id": 151643,
+        "do_sample": false,
+        "temperature": 0.0,
+        "top_p": 1.0,
+        "max_prompt_length": 256,
+        "max_new_tokens": 256,
+        "batch_size": 16
+      },
+      "n_rows": 450,
+      "wall_clock_s": 306.85165187100006
+    }
+  }
+}

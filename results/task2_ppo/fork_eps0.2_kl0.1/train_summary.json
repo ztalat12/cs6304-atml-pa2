@@ -1,0 +1,21 @@
+{
+  "run": "fork_eps0.2_kl0.1",
+  "updates": 8,
+  "prompts_per_update": 1,
+  "ppo_epochs": 2,
+  "eps": 0.2,
+  "beta_kl": 0.1,
+  "gamma": 1.0,
+  "gae_lambda": 0.95,
+  "policy_lr": 3e-06,
+  "value_lora_lr": 0.0001,
+  "value_head_lr": 0.0003,
+  "seed": 6304,
+  "max_response_length": 512,
+  "generated_tokens": 2114,
+  "precision": "fp16 autocast + GradScaler, fp32 trainable weights",
+  "wall_clock_s": 115.50877501500008,
+  "peak_vram_gb": 9.003893248,
+  "start": "checkpoints/ppo_midpoint_policy",
+  "output": "/tmp/PA2/outputs/task2_ppo/fork_eps0.2_kl0.1"
+}

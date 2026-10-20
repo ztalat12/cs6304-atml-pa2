@@ -1,0 +1,27 @@
+{
+  "n_prompts": 100,
+  "max_new_tokens": 768,
+  "reward_mean": 1.7412265014648438,
+  "reward_std": 1.0889383288177312,
+  "kl_token_mean": 3.335135998764135e-05,
+  "kl_seq_mean": 0.009683900886011542,
+  "entropy_sampled": 0.8276887742568853,
+  "entropy_exact": 1.032648285805593,
+  "length_tokens": {
+    "mean": 290.36,
+    "std": 251.51747614843947,
+    "median": 220.5,
+    "iqr": 405.5,
+    "n": 100
+  },
+  "truncation_rate": 0.08,
+  "distinct2_mean": 0.9308221763981815,
+  "name": "fork_dr_grpo",
+  "adapter": "outputs/task3_grpo/fork_dr_grpo",
+  "seed": 6304,
+  "decoding": {
+    "temperature": 0.7,
+    "top_p": 0.9,
+    "do_sample": true
+  }
+}

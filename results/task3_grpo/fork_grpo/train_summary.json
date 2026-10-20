@@ -1,0 +1,23 @@
+{
+  "run": "fork_grpo",
+  "loss_type": "grpo",
+  "updates": 8,
+  "prompts_per_update": 1,
+  "num_generations": 4,
+  "policy_epochs": 1,
+  "learning_rate": 5e-06,
+  "clip_epsilon": 0.2,
+  "kl_beta": 0.1,
+  "max_completion_length": 512,
+  "mask_truncated_completions": true,
+  "seed": 6304,
+  "generated_tokens": 10254,
+  "masked_generated_tokens": 5632,
+  "wasted_token_fraction": 0.5492490735322801,
+  "uninformative_tol": 1e-06,
+  "precision": "fp16 autocast + GradScaler, fp32 trainable weights",
+  "wall_clock_s": 170.33223876800002,
+  "peak_vram_gb": 7.986538496,
+  "start": "checkpoints/grpo_midpoint_policy",
+  "output": "/tmp/PA2/outputs/task3_grpo/fork_grpo"
+}

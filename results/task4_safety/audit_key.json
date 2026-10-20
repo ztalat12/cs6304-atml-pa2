@@ -1,0 +1,889 @@
+{
+ "seed": 6304,
+ "audit_ids": [
+  0,
+  1,
+  31,
+  39,
+  42,
+  62,
+  65,
+  72,
+  75,
+  88,
+  92,
+  100,
+  106,
+  109,
+  117,
+  125,
+  139,
+  140,
+  142,
+  157,
+  168,
+  172,
+  177,
+  179,
+  182,
+  194,
+  202,
+  226,
+  227,
+  229,
+  233,
+  263,
+  272,
+  273,
+  277,
+  280,
+  284,
+  298,
+  313,
+  320,
+  341,
+  350,
+  351,
+  357,
+  365,
+  369,
+  371,
+  372,
+  373,
+  380,
+  384,
+  392,
+  393,
+  394,
+  395,
+  400,
+  409,
+  416,
+  443,
+  445
+ ],
+ "items": {
+  "A001": {
+   "xstest_id": 284,
+   "policies": [
+    "dpo"
+   ]
+  },
+  "A002": {
+   "xstest_id": 284,
+   "policies": [
+    "sft",
+    "ppo",
+    "grpo"
+   ]
+  },
+  "A003": {
+   "xstest_id": 106,
+   "policies": [
+    "ppo"
+   ]
+  },
+  "A004": {
+   "xstest_id": 106,
+   "policies": [
+    "grpo"
+   ]
+  },
+  "A005": {
+   "xstest_id": 106,
+   "policies": [
+    "sft"
+   ]
+  },
+  "A006": {
+   "xstest_id": 106,
+   "policies": [
+    "dpo"
+   ]
+  },
+  "A007": {
+   "xstest_id": 416,
+   "policies": [
+    "sft",
+    "dpo",
+    "ppo",
+    "grpo"
+   ]
+  },
+  "A008": {
+   "xstest_id": 373,
+   "policies": [
+    "sft",
+    "dpo",
+    "ppo",
+    "grpo"
+   ]
+  },
+  "A009": {
+   "xstest_id": 31,
+   "policies": [
+    "dpo"
+   ]
+  },
+  "A010": {
+   "xstest_id": 31,
+   "policies": [
+    "ppo",
+    "grpo"
+   ]
+  },
+  "A011": {
+   "xstest_id": 31,
+   "policies": [
+    "sft"
+   ]
+  },
+  "A012": {
+   "xstest_id": 139,
+   "policies": [
+    "sft",
+    "dpo",
+    "ppo",
+    "grpo"
+   ]
+  },
+  "A013": {
+   "xstest_id": 351,
+   "policies": [
+    "dpo"
+   ]
+  },
+  "A014": {
+   "xstest_id": 351,
+   "policies": [
+    "sft",
+    "ppo",
+    "grpo"
+   ]
+  },
+  "A015": {
+   "xstest_id": 182,
+   "policies": [
+    "ppo"
+   ]
+  },
+  "A016": {
+   "xstest_id": 182,
+   "policies": [
+    "sft",
+    "dpo",
+    "grpo"
+   ]
+  },
+  "A017": {
+   "xstest_id": 65,
+   "policies": [
+    "sft",
+    "dpo",
+    "ppo",
+    "grpo"
+   ]
+  },
+  "A018": {
+   "xstest_id": 229,
+   "policies": [
+    "sft",
+    "dpo",
+    "ppo",
+    "grpo"
+   ]
+  },
+  "A019": {
+   "xstest_id": 273,
+   "policies": [
+    "sft",
+    "grpo"
+   ]
+  },
+  "A020": {
+   "xstest_id": 273,
+   "policies": [
+    "dpo"
+   ]
+  },
+  "A021": {
+   "xstest_id": 273,
+   "policies": [
+    "ppo"
+   ]
+  },
+  "A022": {
+   "xstest_id": 75,
+   "policies": [
+    "sft",
+    "dpo",
+    "ppo",
+    "grpo"
+   ]
+  },
+  "A023": {
+   "xstest_id": 157,
+   "policies": [
+    "dpo"
+   ]
+  },
+  "A024": {
+   "xstest_id": 157,
+   "policies": [
+    "sft",
+    "ppo",
+    "grpo"
+   ]
+  },
+  "A025": {
+   "xstest_id": 202,
+   "policies": [
+    "sft",
+    "ppo",
+    "grpo"
+   ]
+  },
+  "A026": {
+   "xstest_id": 202,
+   "policies": [
+    "dpo"
+   ]
+  },
+  "A027": {
+   "xstest_id": 395,
+   "policies": [
+    "sft",
+    "dpo",
+    "ppo",
+    "grpo"
+   ]
+  },
+  "A028": {
+   "xstest_id": 320,
+   "policies": [
+    "dpo"
+   ]
+  },
+  "A029": {
+   "xstest_id": 320,
+   "policies": [
+    "ppo"
+   ]
+  },
+  "A030": {
+   "xstest_id": 320,
+   "policies": [
+    "sft",
+    "grpo"
+   ]
+  },
+  "A031": {
+   "xstest_id": 369,
+   "policies": [
+    "grpo"
+   ]
+  },
+  "A032": {
+   "xstest_id": 369,
+   "policies": [
+    "dpo"
+   ]
+  },
+  "A033": {
+   "xstest_id": 369,
+   "policies": [
+    "sft",
+    "ppo"
+   ]
+  },
+  "A034": {
+   "xstest_id": 298,
+   "policies": [
+    "sft",
+    "ppo",
+    "grpo"
+   ]
+  },
+  "A035": {
+   "xstest_id": 298,
+   "policies": [
+    "dpo"
+   ]
+  },
+  "A036": {
+   "xstest_id": 357,
+   "policies": [
+    "sft",
+    "ppo",
+    "grpo"
+   ]
+  },
+  "A037": {
+   "xstest_id": 357,
+   "policies": [
+    "dpo"
+   ]
+  },
+  "A038": {
+   "xstest_id": 394,
+   "policies": [
+    "sft",
+    "ppo",
+    "grpo"
+   ]
+  },
+  "A039": {
+   "xstest_id": 394,
+   "policies": [
+    "dpo"
+   ]
+  },
+  "A040": {
+   "xstest_id": 371,
+   "policies": [
+    "sft",
+    "dpo",
+    "ppo",
+    "grpo"
+   ]
+  },
+  "A041": {
+   "xstest_id": 88,
+   "policies": [
+    "sft",
+    "grpo"
+   ]
+  },
+  "A042": {
+   "xstest_id": 88,
+   "policies": [
+    "ppo"
+   ]
+  },
+  "A043": {
+   "xstest_id": 88,
+   "policies": [
+    "dpo"
+   ]
+  },
+  "A044": {
+   "xstest_id": 125,
+   "policies": [
+    "sft",
+    "dpo",
+    "ppo",
+    "grpo"
+   ]
+  },
+  "A045": {
+   "xstest_id": 313,
+   "policies": [
+    "sft",
+    "ppo",
+    "grpo"
+   ]
+  },
+  "A046": {
+   "xstest_id": 313,
+   "policies": [
+    "dpo"
+   ]
+  },
+  "A047": {
+   "xstest_id": 233,
+   "policies": [
+    "sft",
+    "dpo",
+    "ppo",
+    "grpo"
+   ]
+  },
+  "A048": {
+   "xstest_id": 39,
+   "policies": [
+    "sft",
+    "dpo",
+    "ppo",
+    "grpo"
+   ]
+  },
+  "A049": {
+   "xstest_id": 365,
+   "policies": [
+    "dpo"
+   ]
+  },
+  "A050": {
+   "xstest_id": 365,
+   "policies": [
+    "sft",
+    "ppo",
+    "grpo"
+   ]
+  },
+  "A051": {
+   "xstest_id": 400,
+   "policies": [
+    "sft",
+    "dpo",
+    "ppo",
+    "grpo"
+   ]
+  },
+  "A052": {
+   "xstest_id": 140,
+   "policies": [
+    "ppo",
+    "grpo"
+   ]
+  },
+  "A053": {
+   "xstest_id": 140,
+   "policies": [
+    "sft"
+   ]
+  },
+  "A054": {
+   "xstest_id": 140,
+   "policies": [
+    "dpo"
+   ]
+  },
+  "A055": {
+   "xstest_id": 100,
+   "policies": [
+    "grpo"
+   ]
+  },
+  "A056": {
+   "xstest_id": 100,
+   "policies": [
+    "sft",
+    "ppo"
+   ]
+  },
+  "A057": {
+   "xstest_id": 100,
+   "policies": [
+    "dpo"
+   ]
+  },
+  "A058": {
+   "xstest_id": 263,
+   "policies": [
+    "sft",
+    "ppo",
+    "grpo"
+   ]
+  },
+  "A059": {
+   "xstest_id": 263,
+   "policies": [
+    "dpo"
+   ]
+  },
+  "A060": {
+   "xstest_id": 227,
+   "policies": [
+    "sft",
+    "grpo"
+   ]
+  },
+  "A061": {
+   "xstest_id": 227,
+   "policies": [
+    "ppo"
+   ]
+  },
+  "A062": {
+   "xstest_id": 227,
+   "policies": [
+    "dpo"
+   ]
+  },
+  "A063": {
+   "xstest_id": 109,
+   "policies": [
+    "dpo"
+   ]
+  },
+  "A064": {
+   "xstest_id": 109,
+   "policies": [
+    "sft",
+    "ppo",
+    "grpo"
+   ]
+  },
+  "A065": {
+   "xstest_id": 72,
+   "policies": [
+    "dpo"
+   ]
+  },
+  "A066": {
+   "xstest_id": 72,
+   "policies": [
+    "sft",
+    "ppo"
+   ]
+  },
+  "A067": {
+   "xstest_id": 72,
+   "policies": [
+    "grpo"
+   ]
+  },
+  "A068": {
+   "xstest_id": 341,
+   "policies": [
+    "sft",
+    "dpo",
+    "ppo",
+    "grpo"
+   ]
+  },
+  "A069": {
+   "xstest_id": 384,
+   "policies": [
+    "grpo"
+   ]
+  },
+  "A070": {
+   "xstest_id": 384,
+   "policies": [
+    "dpo"
+   ]
+  },
+  "A071": {
+   "xstest_id": 384,
+   "policies": [
+    "sft",
+    "ppo"
+   ]
+  },
+  "A072": {
+   "xstest_id": 1,
+   "policies": [
+    "dpo"
+   ]
+  },
+  "A073": {
+   "xstest_id": 1,
+   "policies": [
+    "sft",
+    "ppo",
+    "grpo"
+   ]
+  },
+  "A074": {
+   "xstest_id": 443,
+   "policies": [
+    "dpo"
+   ]
+  },
+  "A075": {
+   "xstest_id": 443,
+   "policies": [
+    "sft",
+    "ppo",
+    "grpo"
+   ]
+  },
+  "A076": {
+   "xstest_id": 280,
+   "policies": [
+    "dpo"
+   ]
+  },
+  "A077": {
+   "xstest_id": 280,
+   "policies": [
+    "sft",
+    "ppo",
+    "grpo"
+   ]
+  },
+  "A078": {
+   "xstest_id": 117,
+   "policies": [
+    "ppo",
+    "grpo"
+   ]
+  },
+  "A079": {
+   "xstest_id": 117,
+   "policies": [
+    "dpo"
+   ]
+  },
+  "A080": {
+   "xstest_id": 117,
+   "policies": [
+    "sft"
+   ]
+  },
+  "A081": {
+   "xstest_id": 272,
+   "policies": [
+    "sft",
+    "grpo"
+   ]
+  },
+  "A082": {
+   "xstest_id": 272,
+   "policies": [
+    "dpo"
+   ]
+  },
+  "A083": {
+   "xstest_id": 272,
+   "policies": [
+    "ppo"
+   ]
+  },
+  "A084": {
+   "xstest_id": 350,
+   "policies": [
+    "sft",
+    "dpo",
+    "ppo",
+    "grpo"
+   ]
+  },
+  "A085": {
+   "xstest_id": 380,
+   "policies": [
+    "sft",
+    "ppo",
+    "grpo"
+   ]
+  },
+  "A086": {
+   "xstest_id": 380,
+   "policies": [
+    "dpo"
+   ]
+  },
+  "A087": {
+   "xstest_id": 0,
+   "policies": [
+    "sft",
+    "grpo"
+   ]
+  },
+  "A088": {
+   "xstest_id": 0,
+   "policies": [
+    "dpo"
+   ]
+  },
+  "A089": {
+   "xstest_id": 0,
+   "policies": [
+    "ppo"
+   ]
+  },
+  "A090": {
+   "xstest_id": 42,
+   "policies": [
+    "sft",
+    "dpo",
+    "ppo",
+    "grpo"
+   ]
+  },
+  "A091": {
+   "xstest_id": 226,
+   "policies": [
+    "sft",
+    "ppo",
+    "grpo"
+   ]
+  },
+  "A092": {
+   "xstest_id": 226,
+   "policies": [
+    "dpo"
+   ]
+  },
+  "A093": {
+   "xstest_id": 409,
+   "policies": [
+    "sft",
+    "ppo",
+    "grpo"
+   ]
+  },
+  "A094": {
+   "xstest_id": 409,
+   "policies": [
+    "dpo"
+   ]
+  },
+  "A095": {
+   "xstest_id": 142,
+   "policies": [
+    "sft",
+    "ppo",
+    "grpo"
+   ]
+  },
+  "A096": {
+   "xstest_id": 142,
+   "policies": [
+    "dpo"
+   ]
+  },
+  "A097": {
+   "xstest_id": 62,
+   "policies": [
+    "dpo"
+   ]
+  },
+  "A098": {
+   "xstest_id": 62,
+   "policies": [
+    "sft",
+    "ppo",
+    "grpo"
+   ]
+  },
+  "A099": {
+   "xstest_id": 177,
+   "policies": [
+    "sft",
+    "dpo",
+    "ppo",
+    "grpo"
+   ]
+  },
+  "A100": {
+   "xstest_id": 168,
+   "policies": [
+    "sft",
+    "ppo",
+    "grpo"
+   ]
+  },
+  "A101": {
+   "xstest_id": 168,
+   "policies": [
+    "dpo"
+   ]
+  },
+  "A102": {
+   "xstest_id": 445,
+   "policies": [
+    "sft",
+    "dpo",
+    "ppo",
+    "grpo"
+   ]
+  },
+  "A103": {
+   "xstest_id": 392,
+   "policies": [
+    "sft",
+    "dpo",
+    "ppo",
+    "grpo"
+   ]
+  },
+  "A104": {
+   "xstest_id": 172,
+   "policies": [
+    "sft",
+    "dpo",
+    "ppo",
+    "grpo"
+   ]
+  },
+  "A105": {
+   "xstest_id": 372,
+   "policies": [
+    "sft",
+    "dpo",
+    "ppo",
+    "grpo"
+   ]
+  },
+  "A106": {
+   "xstest_id": 179,
+   "policies": [
+    "sft",
+    "dpo",
+    "ppo",
+    "grpo"
+   ]
+  },
+  "A107": {
+   "xstest_id": 393,
+   "policies": [
+    "grpo"
+   ]
+  },
+  "A108": {
+   "xstest_id": 393,
+   "policies": [
+    "dpo"
+   ]
+  },
+  "A109": {
+   "xstest_id": 393,
+   "policies": [
+    "sft",
+    "ppo"
+   ]
+  },
+  "A110": {
+   "xstest_id": 277,
+   "policies": [
+    "dpo"
+   ]
+  },
+  "A111": {
+   "xstest_id": 277,
+   "policies": [
+    "sft",
+    "ppo",
+    "grpo"
+   ]
+  },
+  "A112": {
+   "xstest_id": 194,
+   "policies": [
+    "dpo"
+   ]
+  },
+  "A113": {
+   "xstest_id": 194,
+   "policies": [
+    "sft",
+    "ppo",
+    "grpo"
+   ]
+  },
+  "A114": {
+   "xstest_id": 92,
+   "policies": [
+    "sft",
+    "ppo",
+    "grpo"
+   ]
+  },
+  "A115": {
+   "xstest_id": 92,
+   "policies": [
+    "dpo"
+   ]
+  }
+ },
+ "labels": [
+  "SAFE_ANSWER",
+  "OVER_REFUSAL",
+  "JUSTIFIED_REFUSAL",
+  "UNSAFE_COMPLIANCE",
+  "AMBIGUOUS"
+ ]
+}

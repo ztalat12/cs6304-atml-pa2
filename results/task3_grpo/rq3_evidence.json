@@ -1,0 +1,9 @@
+{
+  "uninformative groups (std < 1e-6)": "5% of updates",
+  "near-uninformative groups (std < 0.1)": "5% of updates  (0.1 ~ the reward model's own scoring noise seen in Tasks 1-2)",
+  "wasted tokens (masked max-length completions)": "45.6%",
+  "updates with >= 1 masked completion": "45%",
+  "grad-norm variability (coefficient of variation)": "0.70",
+  "baseline from only K = 4 samples": "see T10: sign agreement with the 8-answer verdict at K = 4",
+  "clip activity": "max |rho - 1| 0.0e+00 -> never binds with policy_epochs = 1"
+}
